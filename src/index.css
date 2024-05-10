@@ -99,9 +99,26 @@ h2 {
 }
 
 .watchImg {
-  width: 100% !important;
+  width: 100%;
+  max-width: 600px !important;
   border-radius: 1em;
   border: 1px solid rgba(255, 255, 255, 0.226);
+}
+
+.disImg {
+  width: 100%;
+  max-width: 600px !important;
+  border-radius: 1em;
+  border: 1px solid rgba(255, 255, 255, 0.226);
+  object-fit: cover;
+}
+
+.cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 footer {

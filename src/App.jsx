@@ -62,7 +62,7 @@ function App() {
         <Routes>
           <Route path="/" element={
             <div className='page'>
-              <h2>Thunderstorm Outlook</h2>
+              <h2>T-storm Outlook</h2>
               {tstorm && <img src={tstorm.imageUrl} alt="Thunderstorm Outlook" />}
             </div>
           } />
@@ -113,8 +113,8 @@ function App() {
                 <h2>Meso Discussions</h2>
                 {discussions && discussions.length > 0 ? (
                   discussions.map((discussion, index) => (
-                    <div key={index}>
-                      <img src={discussion.imageUrl} alt={`Discussion ${index + 1}`} />
+                    <div className='cont' key={index}>
+                      <img className="disImg" src={discussion.imageUrl} alt={`Discussion ${index + 1}`} />
                       <pre>{discussion.text}</pre>
                     </div>
                   ))
