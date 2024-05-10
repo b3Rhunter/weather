@@ -47,9 +47,9 @@ function App() {
       <div className='app'>
 
         <nav className='navbar'>
-        <NavLink to="/" id='logo' className={({ isActive }) => isActive ? 'active' : ''}>
-          <img src={Logo} alt="SPC Logo" className='logo' />
-        </NavLink>
+          <NavLink to="/" id='logo' className={({ isActive }) => isActive ? 'active' : ''}>
+            <img src={Logo} alt="SPC Logo" className='logo' />
+          </NavLink>
           <NavLink to="/day1" className={({ isActive }) => isActive ? 'active' : ''}>Day 1</NavLink>
           <NavLink to="/day2" className={({ isActive }) => isActive ? 'active' : ''}>Day 2</NavLink>
           <NavLink to="/day3" className={({ isActive }) => isActive ? 'active' : ''}>Day 3</NavLink>
@@ -60,12 +60,19 @@ function App() {
 
 
         <Routes>
-          <Route path="/" element={
-            <div className='page'>
-              <h2>T-storm Outlook</h2>
-              {tstorm && <img src={tstorm.imageUrl} alt="Thunderstorm Outlook" />}
-            </div>
-          } />
+          <Route
+            path="/"
+            element={
+              <div className="page">
+                <h2>Thunderstorm Outlook</h2>
+                {tstorm ? (
+                  <img src={tstorm.imageUrl} alt="Thunderstorm Outlook" />
+                ) : (
+                  <p>No thunderstorm outlook available</p>
+                )}
+              </div>
+            }
+          />
           <Route path="/day1" element={
             <div className='page'>
               <h2>Day 1 Outlook</h2>
